@@ -9111,6 +9111,27 @@ font-weight: bold;
 
 
 
+    .imagePreviewTwoColumn {
+        margin: 0 auto;
+        max-width: 500px;
+        margin-top: 19px;
+        border-right: 1px solid #bbb;
+    }
+    
+    .specformRight {
+        padding-left: 33px;
+    }
+    
+        .imagePreview {
+        margin: 0 auto;
+        max-width: 500px;
+        border: 1px solid #bbb;
+        padding: 40px;
+    }
+    
+    .imagePreview img {
+        margin: 0 auto;
+    }
 
 
 

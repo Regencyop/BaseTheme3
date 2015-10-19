@@ -1,1 +1,22 @@
 
+
+	body {
+		/*background: url('http://www.four51.com/Themes/Custom/df7e2b71-6326-4da6-a24f-554d7d910faf/backgroundImage/background-color-mezzoPix-grayscale.jpg') no-repeat center center fixed;
+	    -webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		*/
+		color: #bbb;
+        background-color: white !important;
+    }
+    
+    .container-view {
+        background-color: rgba(255, 255, 255, 0.5);
+        
+    }
+    
+    .colorControl {
+        color: red !important;
+        background-color: purple !important;
+    }

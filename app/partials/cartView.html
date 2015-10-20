@@ -7,7 +7,7 @@
             </ul>
         </nav>
         
-		<div ng-show="user.Permissions.contains('Comments')">Comments: <input type="text" ng-model="currentOrder.Comments"> <br></div>
+		<!--<div ng-show="user.Permissions.contains('Comments')">Comments: <input type="text" ng-model="currentOrder.Comments"> <br></div>-->
 		<div ng-show="user.Permissions.contains('EditPOID')">Order ID: <input type="text" ng-model="currentOrder.ExternalID"><br></div>
 		<div ng-show="user.Permissions.contains('CostCenterPerOrder')">Cost Center: <input type="text" ng-model="currentOrder.CostCenter"><br></div>
 <form ng-submit="saveChanges()" name="cart" novalidate="">
@@ -23,7 +23,7 @@
                     </h3>
                 </div>
                 <div class="panel-lineitem" ng-repeat="item in currentOrder.LineItems">
-                    <button type="button" title="Remove Item" class="btn btn-danger" ng-click="removeItem(item)">
+                    <button type="button" title="Remove Item" class="btn btn-danger deleteItem" ng-click="removeItem(item)">
                         <span class="fa fa-minus-circle fa-inverse"></span>
                     </button>
                     <div class="col-sm-3">
@@ -206,19 +206,19 @@
 
                 <ul>
                     <li>
-                        <button type="button" class="btn btn-danger" ng-click="currentOrder.Status == 'AwaitingApproval' ? cancelEdit() : cancelOrder()">
+                        <button type="button" class="btn btn-danger cancelColor" ng-click="currentOrder.Status == 'AwaitingApproval' ? cancelEdit() : cancelOrder()">
                             <small ng-if="currentOrder.Status != 'AwaitingApproval'">{{('Cancel' | r) + ' ' + ('Order' | r) | xlat}}</small>
                             <small ng-if="currentOrder.Status == 'AwaitingApproval'">{{('Cancel' | r) + ' ' + ('Edit' | r) | xlat}}</small>
                         </button>
                     </li>
                     <li>
-                        <button type="submit" class="btn btn-primary" ng-click="saveChanges()">
+                        <button type="submit" class="btn btn-primary saveColor" ng-click="saveChanges()">
                             <loadingindicator  ng-show="displayLoadingIndicator" />
                             <small>{{('Save' | r) + ' ' + ('Order' | r) | xlat}}</small>
                         </button>
                     </li>
                     <li>
-                        <button class="btn" ng-class="{'btn-warning': cart.$invalid, 'btn-success': !cart.$invalid }" ng-click="submitPunchoutOrder()" ng-disabled="cart.$invalid">
+                        <button class="btn submitColor" ng-class="{'btn-warning': cart.$invalid, 'btn-success': !cart.$invalid }" ng-click="submitPunchoutOrder()" ng-disabled="cart.$invalid">
                             <i ng-show="cart.$invalid" class="fa fa-warning"></i>
                             <span>{{'Submit' | r | xlat}} {{window.outerWidth}}</span>
                         </button>
@@ -235,4 +235,7 @@
 	</form>
     <cartprint class="visible-print" />
 </section>
+
+
+<!--updated for custom.css - bb -->
 

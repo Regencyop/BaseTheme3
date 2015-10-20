@@ -630,15 +630,6 @@ fieldset[disabled] .btn-link:focus {
   background-clip: padding-box;
 }
 
-.dropdown-menu a{
-    background-color: #3A3B3B !important;
-}
-
-.dropdown-menu a:hover{
-    background-color: #3A3B3B !important;
-    font-size: 105%;
-    text-decoration: none;
-}
 
 .dropdown-menu.pull-right,
 .dropdown-mega .dropdown-menu.pull-right {
@@ -2138,7 +2129,7 @@ fieldset[disabled] .btn-link:focus {
 }
 .navbar .container .navbar-nav.pull-left li ul li,
 .navbar .container-view .navbar-nav.pull-left li ul li {
-  width: 100%;
+  width: 200px;
 }
 .navbar .container .navbar-nav.pull-left li ul li a,
 .navbar .container-view .navbar-nav.pull-left li ul li a {
@@ -2938,7 +2929,7 @@ font-weight: bold;
     }
 
 
-/* update - BB -- stable */
+
 
 
 

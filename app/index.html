@@ -14,7 +14,8 @@
     <link href='//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="css/animate.min.css" />
 </head>
-<body ng-cloak ng-class="ng-cloak">
+<!-- this animation is to mask the angularjs page flicker on initial load-->
+<body class="animated fadeIn pageLoadControl" ng-cloak ng-class="ng-cloak">
 <section>
     <section ng-hide="Four51User.isAuthenticated() || isAnon" class="container">
         <login />
@@ -27,7 +28,8 @@
             <branding />
         </section>
     </section
-    <section ng-show="Four51User.isAuthenticated()" id="content">
+    <!-- this animation is to create the illusion of pieces loading -->
+    <section ng-show="Four51User.isAuthenticated()" class="animated fadeInDown pageLoadControl" id="content">
         <section class="container-view">
 			<ng-view autoscroll />
         </section>

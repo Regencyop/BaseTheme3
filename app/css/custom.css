@@ -47,16 +47,20 @@
     
     .navColors {
         color: black !important;
+        
     }
     
     /* --------------navbar Colors-------------- */
     
     /* Main Navbar Background - the right side - 
        you can add this class to the PDT to match 
-       the right side of the navbar*/
+       the right side of the navbar
+       --This also controls the background-color 
+       of the headers on !2.0_BaseTheme2and3_MainTemplate1*/
     
     .navColorControl {
         background-color: black !important;
+        color: white !important;
     }
     
     /* Links on left side */

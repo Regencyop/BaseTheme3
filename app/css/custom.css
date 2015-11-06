@@ -1,5 +1,12 @@
     /* --------------Main Site Colors-------------- */
 
+
+    /* it is recommended to use either background with a URL
+       or to use background color exclusively of one another.
+       You can comment out everything from background: url to
+       background-size: cover; and then remove the comments 
+       surrounding color and background-color below those lines */
+       
 	body {
 		background: url('http://www.four51.com/Themes/Custom/df7e2b71-6326-4da6-a24f-554d7d910faf/backgroundImage/background-color-mezzoPix-grayscale.jpg') no-repeat center center fixed;
 	    -webkit-background-size: cover;
@@ -22,6 +29,8 @@
     
     /* --------------Category Icon Colors-------------- */
     
+    /* this controls the backgrounds of the category icon container */
+    
     .panel-default {
         background-color: white !important;
     }
@@ -42,7 +51,9 @@
     
     /* --------------navbar Colors-------------- */
     
-    /*Navbar Background*/
+    /* Main Navbar Background - the right side - 
+       you can add this class to the PDT to match 
+       the right side of the navbar*/
     
     .navColorControl {
         background-color: black !important;
@@ -60,24 +71,29 @@
     }
     
     /* Category Dropdown Menu */
+    
+    /* The dropdown menu background color should match
+       the color of the left side links background color
+       when it is not in a hover state */
+       
     .dropdown-menu {
         color: white !important;
         background-color: grey !important;
     }
     
-    .dropdownColor {
+    .dropdownColor a {
         color: white !important;
         background-color: grey !important;
     }
     
-    .dropdownColor:hover {
+    .dropdownColor a:hover {
         color: white !important;
         background-color: grey !important;
         font-size: 105% !important;
         text-decoration: none !important;
     }
     
-    /* backArrow on Left */
+    /* backArrow on Left -- this appears after "page 1" */
     
     .backArrow {
         color: white !important;
@@ -88,6 +104,9 @@
     }
     
     /* Shopping Cart Badges on Right */
+    
+    /* more than likely, there is not a need to adjust these buttons,
+       but this also can adjust the size of each */
     
     .cartPulledRightBackground {
         background-color: black !important;
@@ -115,7 +134,9 @@
     
     /* --------------Checkout Colors-------------- */
     
-    /*buttons*/
+    /* ----buttons---- */
+    
+    /* this controls the cart button colors and their hover states */
     
     .cancelColor {
         background-color: grey !important;
@@ -141,6 +162,8 @@
         background-color: #222 !important;
     }
     
+    /* right side of line item */
+    
     .deleteItem {
         background-color: red !important;
         border: none !important;
@@ -154,7 +177,13 @@
     
     /* --------------Quick Edits-------------- */
     
-    /* Dropdown Width */
+    /* this is intended to be a place for quick edits any updates with animate.css
+       or any site specific updates that need to be made, can occur here.
+       However, it was designed for more involved updates to occur on the theme.
+       Theme updates should signify a custom site */
+    
+    /* Dropdown Width - if there is a long category name
+       you will need to make this width larger*/
     
     .navbar .container .navbar-nav.pull-left li ul li,
     .navbar .container-view .navbar-nav.pull-left li ul li {
@@ -176,7 +205,16 @@
         padding: 10.5px;
     }
     
-    
+    .pageLoadControl {
+        -webkit-animation-duration: 1s;
+        -webkit-animation-delay: 1.5s;
+        -ms-animation-duration: 1s;
+        -ms-animation-delay: 1.5s;
+        -o-animation-duration: 1s;
+        -o-animation-delay: 1.5s;        
+        -moz-animation-duration: 1s;
+        -moz-animation-delay: 1.5s;          
+    } 
     
     
     

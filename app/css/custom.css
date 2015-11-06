@@ -205,6 +205,9 @@
         padding: 10.5px;
     }
     
+    /* pageLoadControl is used to delay the load of the page 
+       in order to mask the page flicker caused by the base app */
+    
     .pageLoadControl {
         -webkit-animation-duration: 1s;
         -webkit-animation-delay: 1.5s;

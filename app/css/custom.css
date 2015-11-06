@@ -207,6 +207,10 @@
     
     /* pageLoadControl is used to delay the load of the page 
        in order to mask the page flicker caused by the base app */
+       
+    /* To adjust the amount of load time, change animation-delay
+       The animation-duration controls the lenght of time it takes 
+       once the animation begins */
     
     .pageLoadControl {
         -webkit-animation-duration: 1s;

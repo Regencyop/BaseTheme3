@@ -121,6 +121,53 @@ four51.app.directive('staticspecstable', function() {
     return obj;
 });
 
+
+four51.app.directive('colorchartable', function() {
+    var obj = {
+        scope: {
+			specgroups : '=',
+	        length: '='
+        },
+        restrict: 'E',
+        templateUrl: 'partials/controls/colorCharts.html',
+		controller: ['$scope', function($scope){
+			$scope.hasvisiblechild = function(specs){
+				var hasChild = false;
+				angular.forEach(specs, function(item){
+					if(item.VisibleToCustomer)
+						hasChild = true;
+				})
+				return hasChild;
+			}
+		}]
+    };
+
+    return obj;
+});
+
+four51.app.directive('sizechartable', function() {
+    var obj = {
+        scope: {
+			specgroups : '=',
+	        length: '='
+        },
+        restrict: 'E',
+        templateUrl: 'partials/controls/sizeCharts.html',
+		controller: ['$scope', function($scope){
+			$scope.hasvisiblechild = function(specs){
+				var hasChild = false;
+				angular.forEach(specs, function(item){
+					if(item.VisibleToCustomer)
+						hasChild = true;
+				})
+				return hasChild;
+			}
+		}]
+    };
+
+    return obj;
+});
+
 four51.app.directive('productnav', function() {
 	var obj = {
 		scope: {

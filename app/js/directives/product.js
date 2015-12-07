@@ -121,7 +121,6 @@ four51.app.directive('staticspecstable', function() {
     return obj;
 });
 
-
 four51.app.directive('colorchartable', function() {
     var obj = {
         scope: {
@@ -167,6 +166,7 @@ four51.app.directive('sizechartable', function() {
 
     return obj;
 });
+
 
 four51.app.directive('productnav', function() {
 	var obj = {

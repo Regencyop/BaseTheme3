@@ -20,7 +20,8 @@
     <section ng-hide="Four51User.isAuthenticated() || isAnon" class="container">
         <login />
     </section>
-        <section ng-show="Four51User.isAuthenticated()" id="navAndBrandingContainer">
+    <!--These load once-->
+    <section ng-show="Four51User.isAuthenticated()" id="navAndBrandingContainer">
         <section class="hidden-print">
             <navigation />
         </section>
@@ -30,7 +31,7 @@
     </section
     <!-- this animation is to create the illusion of pieces loading -->
     <section ng-show="Four51User.isAuthenticated()" class="animated fadeInDown pageLoadControl" id="content">
-        <section class="container-view">
+        <section class="container-view backgroundShadow">
 			<ng-view autoscroll />
         </section>
         <section class="hidden-print">
@@ -62,6 +63,7 @@
     <script src="backToTop.js" data-group="resources"></script>
     <script src="ordercloud-specforms.js" data-group="resources"></script>
     <script src="productMatrix.js" data-group="resources"></script>
+    <script src="AddToCartPreview.js" data-group="resources"></script>
     <script src="tabsView.js" data-group="resources"</script>
 
     <script src="//maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>

@@ -1430,8 +1430,8 @@ fieldset[disabled] .btn-link:focus {
 
 /*reference--main nav header--look here*/
 .navbar-default {
-  background-color: #0e0e0e;
-  border-color: #0e0e0e;
+  background-color: transparent;
+  border-color: none;
 }
 .navbar-default .navbar-brand {
   color: #ffffff;
@@ -1618,7 +1618,7 @@ fieldset[disabled] .btn-link:focus {
 .panel-lineitem,
 .panel-order-history,
 .panel-order-shipping-multiple {
-  padding: 15px;
+  padding: 0 15px;
 }
 .panel-heading {
   padding: 10px 15px;
@@ -2185,32 +2185,39 @@ fieldset[disabled] .btn-link:focus {
   display: inline-block;
   float: left;
 }
-.navbar-fixed-bottom ul li:nth-of-type(1) {
-  width: 25%;
-}
-.navbar-fixed-bottom ul li:nth-of-type(1) .btn {
-  font-size: 11px;
-}
+
+/*
 .navbar-fixed-bottom ul li:nth-of-type(2) {
   width: 25%;
 }
-.navbar-fixed-bottom ul li:nth-of-type(2) .btn {
-  font-size: 11px;
-}
-.navbar-fixed-bottom ul li:last-child {
-  width: 50%;
-}
+
 .navbar-fixed-bottom ul li:last-child .btn {
-  text-transform: uppercase;
-}
-.navbar-fixed-bottom ul li .btn {
-  width: 100%;
-  height: 60px;
-  border: none;
-  border-radius: 0;
-  padding: 20px 0;
-  text-transform: lowercase;
-}
+  text-transform: none;
+}*/
+    .navbar-fixed-bottom ul li:last-child {
+      width: 70%;
+      float: right;
+      padding-right: 15px;
+    }
+
+    .navbar-fixed-bottom ul li .btn {
+      height: 60px;
+      border: 3px solid #999;
+      padding: 13px 26px;
+      font-size: 1.3em; 
+      border-radius: 10px;
+      float: right;
+    }
+
+    .navbar-fixed-bottom ul li .btn:hover {
+      height: 60px;
+      border: 3px solid #999;
+      padding: 13px 26px;
+      font-size: 1.3em; 
+      border-radius: 10px;
+      float: right;
+    }
+
 .navbar-fixed-bottom ul li .btn-warning[disabled] {
   opacity: 1;
 }
@@ -2222,6 +2229,8 @@ fieldset[disabled] .btn-link:focus {
 .nav ul li span.text-primary {
   display: inline-block;
   margin-top: 15px;
+  padding-left: 15px;
+  font-size: 2em;
   font-weight: bold;
 }
 .nav ul li span i {
@@ -2481,8 +2490,8 @@ fieldset[disabled] .btn-link:focus {
 
 
 @media (min-width: 990px){
-	.container, .container-view, .jumbotron .container, .jumbotron .container-view, .navbar-fixed-bottom, .navbar-fixed-top {
-		max-width: 1210px; /* change to max-width:  1210px for large desktop */
+	.container, .container-view, .jumbotron .container, .jumbotron .container-view, .navbar-fixed-bottom, .footerContainer, .navbar-fixed-top {
+		max-width: 1210px;
 		margin: 0 auto;
 	}
 	.container-view {
@@ -2490,9 +2499,9 @@ fieldset[disabled] .btn-link:focus {
 	}
 	.header {
 		max-width: 1210px;
-		margin: 15px auto 0;
+		margin: 0px auto 0;
 		padding: 15px 0px 0;
-		background-color: rgba(255, 255, 255, 0.5);
+		background-color: rgba(255, 255, 255, 0);
 	}
 	.navbar-fixed-top {
 		position: static;
@@ -2631,7 +2640,7 @@ fieldset[disabled] .btn-link:focus {
 /* Begin Colors --All-- (largeScreen)*/
 
 .navbar-default  {
-    background-color: #0e0e0e;
+    background-color: transparent;
 }
 
 .navbar .container .navbar-nav.pull-left li.fadeInLeft a i, .navbar .container-view .navbar-nav.pull-left li.fadeInLeft a i {
@@ -2871,23 +2880,27 @@ font-weight: bold;
 
 .product-variants a:hover {
     background-color: #999;
+}
 
 @media (min-width: 768px) {
     .container,
-    .container-view {
+    .container-view,
+    .footerContainer {
         width: 730px;
     }
 }
 @media (min-width: 992px) {
     .container,
-    .container-view {
+    .container-view,
+    .footerContainer {
         width: 950px;
     }
 }
 @media (min-width: 1200px) {
     .container,
-    .container-view {
-        width: 1150px;
+    .container-view,
+    .footerContainer {
+        width: 100%;
     }
 }
 
@@ -2917,7 +2930,7 @@ font-weight: bold;
         padding-left: 33px;
     }
     
-        .imagePreview {
+    .imagePreview {
         margin: 0 auto;
         max-width: 500px;
         border: 1px solid #bbb;
@@ -2928,13 +2941,55 @@ font-weight: bold;
         margin: 0 auto;
     }
 
+/* ----------- Footer ---------------- */
+    
+    .footerContainer {
+        z-index: 1;
+        font-size: 1.5em;
+        line-height: 1.75em;
+        text-align: center;
+        padding: 30px 30px 100px 30px;
+    }
 
+    
+    .officeSuppliesContainer {
+        width: 100%;
+        text-align: center;
+        height: 0px;
+        z-index: 2;
+    }
+    
+    a.officeSupplies {
+        position: relative;
+        font-size: 1.15em;
+        text-decoration: none;
+        bottom: 85px;
+        padding: 7px 75px;
+        background-color: rgba(235,235,235,0.0);
+        color: rgba(255,255,255,1.0);
+        border-radius: 5px;
+        border: 3px solid rgba(255,255,255,0.35);
+        z-index: 2;
+    }
+    
+    a.officeSupplies:hover {
+        position: relative;
+        font-size: 1.15em;
+        background-color: rgba(235,235,235,0.3);
+        color: rgba(41,66,99,1.0);
+        border-radius: 5px;
+        border: 3px solid rgba(255,255,255,0.45);
+    }
 
+    .navColorControl {
+        min-height: 58px;
+    }
 
-
-
-
-
+    .cartHeading {
+        font-size: 1.75em;
+        float: right;
+        padding: 5px 10px 5px 0;
+    }
 
 
 

@@ -8,14 +8,12 @@
        surrounding color and background-color below those lines */
        
 	body {
-		background: url('http://www.four51.com/Themes/Custom/df7e2b71-6326-4da6-a24f-554d7d910faf/backgroundImage/background-color-mezzoPix-grayscale.jpg') no-repeat center center fixed;
-	    -webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		/*
-		color: #bbb;
-        background-color: white !important; */
+		color: #222;
+		background-color: rgba(206,198,195,0.25); 
+    }
+    
+    .backgroundShadow {
+        box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.8);
     }
     
     .companyImageBackground {
@@ -61,19 +59,19 @@
        of the headers on !2.0_BaseTheme2and3_MainTemplate1*/
     
     .navColorControl {
-        background-color: black !important;
+        background-color: #222 !important;
         color: white !important;
     }
     
     /* Links on left side */
     .colorControl {
         color: white !important;
-        background-color: black !important;
+        background-color: #222 !important;
     }
     
     .colorControl:hover {
         color: white !important;
-        background-color: grey !important;
+        background-color: #000 !important;
     }
     
     /* Category Dropdown Menu */
@@ -84,17 +82,17 @@
        
     .dropdown-menu {
         color: white !important;
-        background-color: grey !important;
+        background-color: #000 !important;
     }
     
     .dropdownColor a {
         color: white !important;
-        background-color: grey !important;
+        background-color: #000 !important;
     }
     
     .dropdownColor a:hover {
         color: white !important;
-        background-color: grey !important;
+        background-color: #000 !important;
         font-size: 105% !important;
         text-decoration: none !important;
     }
@@ -115,7 +113,7 @@
        but this also can adjust the size of each */
     
     .cartPulledRightBackground {
-        background-color: black !important;
+        background-color: transparent !important;
     }
     
     .cartCountControl{
@@ -180,6 +178,17 @@
         border: none !important;
     }
     
+    /* -------------- CopyrightView -------------- */
+    
+    .footerContainer .colorHighlight {
+        color: #009CDB;
+    }
+    
+    .footerContainer {
+        background-color: #222;
+        color: #fff;
+    }
+    
     
     /* --------------Quick Edits-------------- */
     
@@ -199,8 +208,8 @@
     /* Company Image */
     
     .jumbotron h2 img {
-	    max-height: 100%;
-    	background-color: white;
+	    max-height: 215px;
+    	background-color: transparent;
     }
     
     .h3Target h3 {
@@ -212,10 +221,11 @@
     }
     
     /* This controls the height of the logo container. Adjust this, to adjust the height
-       of the space surrounding the main logo. */
+       of the space surrounding the main logo.
+       Also the logo height. */
 	
 	.jumbotron .container {
-		height: 300px;  /* custom message no */
+		height: 215px;  /* custom message no */
 		/* height: 360px;  custom message yes | ensure height matches margin-top on .navbar-fixed-top above */
 		padding: 0 0px;
 		overflow: hidden;
@@ -225,7 +235,7 @@
 
     	.navbar-fixed-top {
 		position: static;
-		margin-top: 300px /*  custom message no */
+		margin-top: 215px /*  custom message no */
 		/* margin-top: 345px;  custom message yes | ensure margin matches height on .jumbotron .container below */
 	}
 
@@ -247,6 +257,15 @@
         -moz-animation-duration: 0s;
         -moz-animation-delay: 0s;          
     } 
+    
+    
+    .colorHighlight {
+        color: red !important;
+    }
+    
+    
+    
+    
     
     
     

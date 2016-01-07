@@ -2482,8 +2482,6 @@ fieldset[disabled] .btn-link:focus {
 
 /* Custom CSS */
 
-
-@media (min-width: 990px){
 	.container, .container-view, .jumbotron .container, .jumbotron .container-view, .navbar-fixed-bottom, .footerContainer, .navbar-fixed-top {
 		max-width: 1210px;
 		margin: 0 auto;

@@ -49,7 +49,7 @@
                     </div>
                 -->
                 <div class="panel-lineitem" ng-repeat="item in currentOrder.LineItems">
-                    <button type="button" title="Remove Item" class="btn btn-danger deleteItem" ng-click="removeItem(item)">
+                    <button  type="button"  title="Remove  Item"  class="btn  btn-danger  deleteItem" ng-hide="item.Product.InteropID == 'prodId1' || 'someOtherProdId'" ng-click="removeItem(item)">
                         <span class="fa fa-minus-circle fa-inverse"></span>
                     </button>
                     <div class="col-sm-3">

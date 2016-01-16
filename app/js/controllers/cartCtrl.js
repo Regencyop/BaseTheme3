@@ -81,7 +81,7 @@ function ($scope, $routeParams, $location, $451, Order, OrderConfig, User, Punch
 					if (callback) callback();
 					if(disableComplete) return;
 					$scope.displayLoadingIndicator = false;
-					$location.path('catalog');
+					$scope.actionMessage = 'Your Changes Have Been Saved!';
 				},
 				function(ex) {
 					$scope.errorMessage = ex.Message;
@@ -89,6 +89,19 @@ function ($scope, $routeParams, $location, $451, Order, OrderConfig, User, Punch
 				}
 			);
 		}
+	};
+	
+	//Save Shopping and continue
+	$scope.saveAndContinueShopping = function(callback, disableComplete) {
+		$scope.actionMessage = null;
+		$scope.errorMessage = null;
+		Order.save($scope.currentOrder,
+			function(ex) {
+				$scope.displayLoadingIndicator = false;
+				//Save cart and continue to catalog
+				$location.path('catalog');
+			}
+		);
 	};
 
 	$scope.removeItem = function(item) {

@@ -149,6 +149,7 @@
     
     .cancelColor {
         background-color: grey !important;
+    	color: white !important;
     }
     
     .cancelColor:hover {
@@ -157,6 +158,7 @@
     
     .saveColor {
         background-color: grey !important;   
+	color: white !important;
     }
     
     .saveColor:hover { 

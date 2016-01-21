@@ -284,6 +284,13 @@
         -moz-animation-delay: 0s;          
     } 
     
+    .printOrder {
+        color: #bbb !important;        
+    }
+    
+    .printOrder:hover {
+        color: #777 !important;
+    }
     
     .colorHighlight {
         color: red !important;

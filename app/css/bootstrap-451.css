@@ -6440,7 +6440,7 @@ button::-moz-focus-inner {
   width: 50%;
 }
 .navbar-fixed-bottom ul li:last-child .btn {
-  text-transform: uppercase;
+ 
 }
 .navbar-fixed-bottom ul li .btn {
   width: 100%;
@@ -6448,7 +6448,6 @@ button::-moz-focus-inner {
   border: none;
   border-radius: 0;
   padding: 20px 0;
-  text-transform: lowercase;
 }
 .navbar-fixed-bottom ul li .btn-warning[disabled] {
   opacity: 1;

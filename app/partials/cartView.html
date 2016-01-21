@@ -1,28 +1,3 @@
-<style>
-    .printOrder {
-        float: left;
-        position: relative;
-        top: 5px;
-        font-size: 2em;
-        color: #bbb !important;        
-    }
-    
-    .printOrder:hover {
-        color: #777 !important;
-    }
-    
-    .continueShoppingButton {
-        padding: 30px 0px;
-        position: relative;
-        right: 3px;
-    }
-    
-    .hidePricing {
-        background-color: #fff;
-        position: relative;
-        bottom: 22px;
-    }
-</style>
 <section  class="animated  fadeIn  pageLoadControl">
      <div  ng-show="currentOrder"  class="hidden-print">
          <nav  class="nav  backgroundControl">
@@ -37,7 +12,7 @@
 		 <div  ng-show="user.Permissions.contains('CostCenterPerOrder')">Cost  Center:  <input  type="text"  ng-model="currentOrder.CostCenter"><br></div>
  <form  ng-submit="saveChanges()"  name="cart"  novalidate="">
 
-             <loadingindicator   ng-show="displayLoadingIndicator"  title="{{'Please  wait  while  we  save  your  order'  |  r  |  xlat}}"/>
+             <!--<loadingindicator   ng-show="displayLoadingIndicator"  title="{{'Please  wait  while  we  save  your  order'  |  r  |  xlat}}"/>-->
              <div>
                  <cartmessage  />
              </div>

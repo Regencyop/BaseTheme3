@@ -79,9 +79,14 @@ a:focus {
 .text-primary {
   color: #222;
 }
-.printOrder .text-primary:hover {
-  color: #555;
-}
+
+    .printOrder {
+        float: left;
+        position: relative;
+        top: 5px;
+        font-size: 2em;
+    }
+
 .text-success {
   color: #666;
 }

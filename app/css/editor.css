@@ -1,5 +1,38 @@
-/*do not make changes to this file. It will be overwritten by the css editor. Put theme changes in custom.css*/
+/* Using this file for updates to baseTheme, do not ever overwrite */
 
+
+    .checkoutButtonContainer {
+        position: relative;
+        left: 20px;
+        margin-bottom: 15px;
+    }
+
+    .checkoutBtn {
+        display: inline-block;
+        margin: 0 0 0 1%;
+        font-weight: normal;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        background-image: none;
+        border: 1px solid transparent;
+        white-space: nowrap;
+        padding: 15px 20px;
+        font-size: 1em;
+        line-height: 1.42857143;
+        border-radius: 4px;
+    }
+
+    .smallCheckoutButton {
+        width: 23%;
+    }
+    
+    
+    .largeCheckoutButton {
+        width: 48%;
+    }
+    
+    
 @media (max-width: 767px) {
     
     .checkoutButtonContainer {
@@ -34,6 +67,5 @@
         width: 100%;
         margin-bottom: 0.25em;
     }
+    
 }
-
-

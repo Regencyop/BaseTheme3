@@ -20,7 +20,12 @@ function ($scope, $route, $location, $451, Punchout, User, Order, Security, Orde
 				$('.navbar-fixed-bottom, .headroom.navbar-fixed-top').css("position", "fixed");
 			});
 	}
+	
+	//  ****Do not adjust this unless it is a LIVE PUNCHOUT site, there is no other need to adjust it
+	//  This must absolutely be set to $scope.PunchoutSession = Punchout.punchoutSession; 
+	//  in order for the site to function correctly when live ****
 	$scope.PunchoutSession = Punchout.punchoutSession;
+	//$scope.PunchoutSession = false;
 
 	if($scope.PunchoutSession.PunchOutOperation == 'Edit') $location.path('cart');
 	else if($scope.PunchoutSession.PunchoutLandingCategory) $location.path('catalog/' + $scope.PunchoutSession.PunchoutLandingCategory);

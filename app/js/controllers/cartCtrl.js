@@ -61,7 +61,7 @@ function ($scope, $routeParams, $location, $451, Order, OrderConfig, User, Punch
 						$location.path('catalog');
 					});
 					$scope.displayLoadingIndicator = false;
-					$scope.actionMessage = 'Your Changes Have Been Saved';
+					$scope.actionMessage = 'Your order has been canceled';
 				},
 				function(ex) {
 					$scope.actionMessage = 'An error occurred: ' + ex.Message;
@@ -86,7 +86,7 @@ function ($scope, $routeParams, $location, $451, Order, OrderConfig, User, Punch
 					if (callback) callback();
 					if(disableComplete) return;
 					$scope.displayLoadingIndicator = false;
-					$scope.actionMessage = 'Your Changes Have Been Saved!';
+					$scope.actionMessage = 'Your order is being submitted!';
 				},
 				function(ex) {
 					$scope.errorMessage = ex.Message;
@@ -177,4 +177,4 @@ function ($scope, $routeParams, $location, $451, Order, OrderConfig, User, Punch
 	$scope.cancelEdit = function() {
 		$location.path('order');
 	};
-}]);	
+}]);

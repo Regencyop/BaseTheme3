@@ -2985,15 +2985,6 @@ font-weight: bold;
         padding: 5px 10px 5px 0;
     }
 
-    .cartTitle {
-        position: relative;
-        top: 15px;
-        left: 10px;
-        font-size: 24px;
-        font-weight: 600;
-        text-transform: uppercase;
-    }
-
     .checkoutButtonContainer {
         position: relative;
         left: 20px;
@@ -3025,6 +3016,13 @@ font-weight: bold;
         width: 48%;
     }
     
+    .cartTitle {
+        position: relative;
+        top: 20px;
+        left: 8px;
+        font-size: 2em;
+        font-weight: 600;
+    }
     
     
     

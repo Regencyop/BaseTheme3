@@ -2306,8 +2306,6 @@ fieldset[disabled] .btn-link:focus {
   margin-bottom: 0;
 }
 .thumbnail img {
-  max-height: 75px;
-  max-width: 100%;
   margin: 0 auto 15px;
 }
 .well {

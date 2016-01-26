@@ -213,6 +213,17 @@
     }
     
     /* Company Image Section */
+       
+        /* This controls the height of the logo container. Adjust this, to adjust the height
+       of the space surrounding the main logo.
+       Also the logo height. */
+	
+	.jumbotron .container {
+		height: 215px;  /* custom message no */
+		/* height: 360px;  custom message yes | ensure height matches margin-top on .navbar-fixed-top above */
+		padding: 0 0px;
+		overflow: hidden;
+	}
     
     /* ---------Image Float----------- */
     /* By default this will be commented out. This centers the company image.
@@ -258,16 +269,10 @@
     .empty {
         padding: 10.5px;
     }
-    
-    /* This controls the height of the logo container. Adjust this, to adjust the height
-       of the space surrounding the main logo.
-       Also the logo height. */
 	
-	.jumbotron .container {
-		height: 215px;  /* custom message no */
-		/* height: 360px;  custom message yes | ensure height matches margin-top on .navbar-fixed-top above */
-		padding: 0 0px;
-		overflow: hidden;
+	.thumbnail img {
+		max-height: 150px;
+		max-width: 100%;
 	}
 	
 	/* This controls the height of the margin above the navbar. */

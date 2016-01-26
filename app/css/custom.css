@@ -212,7 +212,7 @@
         width: 200px;
     }
     
-    /* Company Image */
+    /* Company Image Section */
     
     /* ---------Image Float----------- */
     /* By default this will be commented out. This centers the company image.
@@ -232,11 +232,24 @@
         margin-right: 15px;
         */
     }
-    
-    .jumbotron h2 img {
-	    max-height: 215px;
-    	background-color: transparent;
-    }
+       
+     /* ---- Company Image Size ----*/
+	.jumbotron h2 {
+	  margin: 0;
+	  max-height: 100%;
+	}
+	.jumbotron h2 img {
+	  max-height: 215px;
+	  max-width: auto;
+	  background-color: white;
+	}
+	.jumbotron h2 span {
+	  display: block;
+	  clear: left;
+	  display: none;
+	}
+	
+	/* End company Image section */
     
     .h3Target h3 {
         font-size: 19px;

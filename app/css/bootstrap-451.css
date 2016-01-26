@@ -6511,10 +6511,7 @@ button::-moz-focus-inner {
 .jumbotron h2 {
   margin: 0;
 }
-.jumbotron h2 img {
-  max-height: 75px;
-  max-width: auto;
-}
+
 .jumbotron h2 span {
   display: block;
   clear: left;
@@ -6561,11 +6558,7 @@ button::-moz-focus-inner {
 .thumbnail {
   margin-bottom: 0;
 }
-.thumbnail img {
-  max-height: 75px;
-  max-width: 100%;
-  margin: 0 auto 15px;
-}
+
 .well {
   border-radius: 0;
   box-shadow: none;

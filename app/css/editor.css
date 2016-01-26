@@ -1,5 +1,11 @@
 /* Using this file for updates to baseTheme, do not ever overwrite */
 
+    .cartTitle {
+        position: relative;
+        top: 9px;
+        left: 20px;
+        font-size: 2em;
+    }
 
     .checkoutButtonContainer {
         position: relative;

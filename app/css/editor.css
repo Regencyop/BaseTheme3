@@ -1,5 +1,13 @@
 /* Using this file for updates to baseTheme, do not ever overwrite */
 
+    customtextfield[customfield="Variant.Specs.ProductImage"] {
+        display:none;
+    }
+    
+    customtextfield[customfield="Variant.Specs.Weight"] {
+        display:none;
+    }
+
     .cartTitle {
         position: relative;
         top: 9px;

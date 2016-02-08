@@ -1,4 +1,5 @@
-<div ng-hide="LineItem.Specs.Name != 'ProductImage' || LineItem.Specs.Name != 'Weight' || LineItem.Specs.Name != 'VibeItemID'">
+<!--ng-hide="LineItem.Specs.Name != 'ProductImage' || LineItem.Specs.Name != 'Weight' || LineItem.Specs.Name != 'VibeItemID'"-->
+<div class="hidden">
     <div class="view-form-icon" ng-class="{'view-form-icon-input-group':((customfield.Prefix && !hideprefix) || (customfield.Suffix && !hidesuffix))}">
         <div ng-if="customfield.Lines <= 1">
             <label>{{customfield.Label || customfield.Name | r}}</label>
@@ -18,3 +19,4 @@
         </div>
     </div>
 </div>
+   

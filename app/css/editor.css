@@ -46,6 +46,9 @@
         width: 48%;
     }
     
+    .cartThumbnail {
+        max-height: 75px;
+    }
     
 @media (max-width: 767px) {
     

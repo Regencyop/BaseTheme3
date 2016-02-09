@@ -6,7 +6,6 @@
                  <li  class="pull-right"  ng-click="onPrint()"><span><i  class="fa  fa-print  text-primary"  rel="tooltip"  title="{{'Print'  |  r  |  xlat}}"  ></i></span></li>
              </ul>
          </nav>
-        
 		 <!--<div  ng-show="user.Permissions.contains('Comments')">Comments:  <input  type="text"  ng-model="currentOrder.Comments">  <br></div>-->
 		 <div  ng-show="user.Permissions.contains('EditPOID')">Order  ID:  <input  type="text"  ng-model="currentOrder.ExternalID"><br></div>
 		 <div  ng-show="user.Permissions.contains('CostCenterPerOrder')">Cost  Center:  <input  type="text"  ng-model="currentOrder.CostCenter"><br></div>
@@ -36,7 +35,7 @@
                                      <small>{{'Total  Quantity'  |  r  |  xlat}}  <span  ng-show="item.Quantity  *  item.Product.QuantityMultiplier">{{item.Quantity  *  item.Product.QuantityMultiplier}}</span></small>
                                  </p>
                              </div>
-                             <div  class="col-xs-6  col-sm-12  col-md-6  thumbnail"  ng-show="item.Product.LargeImageUrl">
+                             <div  class="col-xs-6  col-sm-12  col-md-6  thumbnail cartThumbnail"  ng-show="item.Product.LargeImageUrl">
                                  <figure>
                                      <img  ng-src="{{item.Product.LargeImageUrl}}"  />
                                  </figure>

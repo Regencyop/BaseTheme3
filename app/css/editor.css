@@ -46,7 +46,7 @@
         width: 48%;
     }
     
-    .cartThumbnail {
+    .cartThumbnail img {
         max-height: 75px;
         max-width: 100%;
     }

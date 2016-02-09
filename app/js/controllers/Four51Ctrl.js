@@ -24,6 +24,7 @@ function ($scope, $route, $location, $451, Punchout, User, Order, Security, Orde
 	//  ****Do not adjust this unless it is a LIVE PUNCHOUT site, there is no other need to adjust it
 	//  This must absolutely be set to $scope.PunchoutSession = Punchout.punchoutSession; 
 	//  in order for the site to function correctly when live ****
+	//  Comment out line 28 and uncomment out line 29 if this is a live Punchout Site
 	$scope.PunchoutSession = Punchout.punchoutSession;
 	//$scope.PunchoutSession = false;
 

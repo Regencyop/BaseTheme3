@@ -2,7 +2,7 @@ four51.app.controller('CartViewCtrl', ['$scope', '$routeParams', '$location', '$
 function ($scope, $routeParams, $location, $451, Order, OrderConfig, User, Punchout, $sce, $timeout, $window) {
 
 	if($scope.PunchoutSession.PunchoutOperation != "Inspect")
-
+//	Line 5 has been moved directly below these comments. Please read before commenting out line 10
 //  **** Do not adjust the line below unless it is already a LIVE PUNCHOUT site, there is no other need to adjust it
 //  This must absolutely be set to $scope.PunchoutSession = Punchout.punchoutSession; 
 //  in order for the site to function correctly when live ****

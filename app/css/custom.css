@@ -314,7 +314,15 @@
         color: red !important;
     }
     
-
+	
+    .imageWidth {
+        padding-right: 25px;
+    }
+    
+    .imageWidth .panel-default {
+        border: none;
+        border-right: 1px solid #bbb;
+    }
     
     
     

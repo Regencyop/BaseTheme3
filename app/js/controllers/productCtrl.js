@@ -45,15 +45,13 @@ function ($scope, $routeParams, $route, $location, $451, Product, ProductDisplay
     			}
     		}
     		//sets Weight spec to be equal to weight on properties page
-    		//commenting out due to possibility of issues with billing
-    		//previously created sites may not have weight on Properties Page
-    	/*	if (spec && (spec.Name  = 'Weight') && ($scope.LineItem.Product.Type != 'VariableText')) {
+    		if (spec && (spec.Name  = 'Weight') && ($scope.LineItem.Product.Type != 'VariableText')) {
     			if (!$scope.LineItem.Product.IsVBOSS) {     
     				if ($scope.LineItem.Specs && $scope.LineItem.Specs.Weight) {
     					$scope.LineItem.Specs.Weight.Value = data.product.ShipWeight;
     				}
     			}
-    		} */
+    		} 
     });
 			
 			if (angular.isFunction(callback))

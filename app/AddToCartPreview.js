@@ -84,6 +84,7 @@ function addtocartpreview() {
             '<h4>{{item.Variant.Description || item.Product.Name}}</h4>',
             '<h6>Item ID: {{item.Variant.ExternalID || item.Product.ExternalID}}</h6>',
             '<h6>Unit Price: {{item.UnitPrice | culturecurrency}}</h6>',
+            '{{showSpecs}}',
             '</div>',
             '</div>',
             '<div class="section-bottom">',
@@ -362,12 +363,26 @@ function AddToCartPreview(User, Order) {
         item.LineTotal = item.UnitPrice * item.Quantity;
     }
 
-    var _add = function (item, list, success) {
+    var _add = function (item, list, success, $scope) {
         if (item.Product.IsVBOSS) {
             item.UnitPrice = item.LineTotal / item.Quantity;
             angular.forEach(item.Specs, function(i){
                 angular.forEach(i.Options, function (option) {
+            
+            //begin add        
+    
+    
+	
+    		//endend
+    		
+    		item.Product.Specs.ProductImage.Value = item.Product.SmallImageUrl;
+			item.Product.Specs.Weight.Value = item.Product.ShipWeight;
+                    
                     if (i.Value === option.Value) {
+                        //item.Product.Specs.Weight.Value = 1;
+                        
+                        item.Specs.ProductImage.Value = item.Product.SmallImageUrl;
+                        item.Specs.Weight.Value = item.Product.ShipWeight;
                         if (option.Markup > 0) {
                             item.Markup = option.Markup;
                         }

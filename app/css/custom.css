@@ -22,7 +22,7 @@
     }
     
     .companyImageBackground {
-        background-color: white !important;
+        background-color: transparent !important;
     }
     
     .container-view {
@@ -252,7 +252,7 @@
 	.jumbotron h2 img {
 	  max-height: 215px;
 	  max-width: auto;
-	  background-color: white;
+	  background-color: transparent;
 	}
 	.jumbotron h2 span {
 	  display: block;

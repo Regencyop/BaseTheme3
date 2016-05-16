@@ -4,6 +4,11 @@
         display:none;
     }
     
+    .dropdownColor a:hover { 
+        font-size: 100% !important;
+        font-weight: bolder;
+    }
+    
     customtextfield[customfield="Variant.Specs.Weight"] {
         display:none;
     }
@@ -79,11 +84,12 @@
         width: 100%;
         margin-bottom: 0.5em;
     }
-    
-    
+
     .largeCheckoutButton {
         width: 100%;
         margin-bottom: 0.25em;
     }
     
 }
+
+    

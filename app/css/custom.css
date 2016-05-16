@@ -98,7 +98,7 @@
     .dropdownColor a:hover {
         color: white !important;
         background-color: #000 !important;
-        font-size: 105% !important;
+        font-weight: bolder !important;
         text-decoration: none !important;
     }
     

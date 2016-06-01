@@ -1,24 +1,7 @@
 four51.app.controller('CartViewCtrl', ['$scope', '$routeParams', '$location', '$451', 'Order', 'OrderConfig', 'User', 'Punchout', '$sce', '$timeout', '$window',
 function ($scope, $routeParams, $location, $451, Order, OrderConfig, User, Punchout, $sce, $timeout, $window) {
     //var declarations
-    var Base64;
-    var decodedString;
-    var productImagePosition;
-    var weightPosition;
-    var newStrings;
-    var updatedString;
-    var encodedXMLString;
-    var updatedXML;
-    var itemProdIds;
-    var minimumTotal;
-    var string;
-    var itemLines;
-    var inc;
-    var shippingWeight;
-    var idOfProduct;
-    var lineItemString;
-    var finalizedString = '';
-    var productInformation = {};
+    var Base64, decodedString, productImagePosition, weightPosition, newStrings, updatedString, encodedXMLString, updatedXML, itemProdIds, minimumTotal, string, itemLines, inc, shippingWeight, idOfProduct, lineItemString, finalizedString = '', productInformation = {};
     //$scope.LineItem.Specs.Weight.Value = data.product.ShipWeight;
 
 //update this for the items to achieve a minimum total order
@@ -52,6 +35,9 @@ function ($scope, $routeParams, $location, $451, Order, OrderConfig, User, Punch
                     idOfProduct = $scope.currentOrder.LineItems[increment].Product.ExternalID;
                     imageURL = $scope.currentOrder.LineItems[increment].Product.LargeImageUrl;
                     shippingWeight = $scope.currentOrder.LineItems[increment].Product.ShipWeight;
+                        if (shippingWeight===null){
+                            shippingWeight = 1;
+                        }
                     productInformation[idOfProduct] = { itemWeight : shippingWeight, thalerusURL : imageURL};
                     // update and-or add pieces
                             if (lineItemString[increment].indexOf("ProductImage") === -1) {

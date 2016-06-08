@@ -10,6 +10,7 @@ function ($scope, $routeParams, $route, $location, $451, Product, ProductDisplay
 		currentPage: 1,
 		pageSize: 10
 	};
+
 	$scope.calcVariantLineItems = function(i){
 		$scope.variantLineItemsOrderTotal = 0;
 		angular.forEach($scope.variantLineItems, function(item){
@@ -22,7 +23,6 @@ function ($scope, $routeParams, $route, $location, $451, Product, ProductDisplay
 	}
 	function init(searchTerm, callback) {
 		ProductDisplayService.getProductAndVariant($routeParams.productInteropID, $routeParams.variantInteropID, function (data) {
-			console.log(data.product.Specs);
 			$scope.LineItem.Product = data.product;
 			$scope.LineItem.Variant = data.variant;
 			ProductDisplayService.setNewLineItemScope($scope);

@@ -55,28 +55,4 @@ function ($scope, $location, $route, $routeParams, $window, ProductDisplayServic
 		$scope.loadingImage = !result;
 		$scope.$apply();
 	});
-	
-	/* Check for the presence of the null value when there is a custom user field default value and replace it with a blank value. */
-    $scope.$watch('Variant', function(val) {
-        ProductDisplayService.getProductAndVariant($routeParams.productInteropID, varID, function(data){
-            if (!val) return;
-            angular.forEach(val.Specs, function(s){
-            	//console.log("this is data: " + data);
-            	//console.log(s);
-            	if (s.Name == "Weight") {
-            	   DynamicWeight = $scope.Product.ShipWeight;
-            	   console.log(s.Value);
-            		s.Value = DynamicWeight;
-            		console.log(s.Value);
-            	}    
-            	if (s.Name == "ProductImage") {
-            	   newUrlValue = $scope.Product.SmallImageUrl;
-            		s.Value = newUrlValue;
-            	}
-                if(s.Value == "null"){
-                    s.Value = "";
-                }
-            });
-        });
-    });
 }]);

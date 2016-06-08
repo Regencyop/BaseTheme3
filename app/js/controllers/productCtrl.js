@@ -10,7 +10,6 @@ function ($scope, $routeParams, $route, $location, $451, Product, ProductDisplay
 		currentPage: 1,
 		pageSize: 10
 	};
-	
 	$scope.calcVariantLineItems = function(i){
 		$scope.variantLineItemsOrderTotal = 0;
 		angular.forEach($scope.variantLineItems, function(item){
@@ -23,6 +22,7 @@ function ($scope, $routeParams, $route, $location, $451, Product, ProductDisplay
 	}
 	function init(searchTerm, callback) {
 		ProductDisplayService.getProductAndVariant($routeParams.productInteropID, $routeParams.variantInteropID, function (data) {
+			console.log(data.product.Specs);
 			$scope.LineItem.Product = data.product;
 			$scope.LineItem.Variant = data.variant;
 			ProductDisplayService.setNewLineItemScope($scope);
@@ -31,37 +31,10 @@ function ($scope, $routeParams, $route, $location, $451, Product, ProductDisplay
 			$scope.$broadcast('ProductGetComplete');
 			$scope.loadingIndicator = false;
 			$scope.setAddToOrderErrors();
-			data.product.Specs.ProductImage.DefaultValue = data.product.SmallImageUrl;
-			data.product.Specs.Weight.DefaultValue = data.product.ShipWeight;
-			var checkForThis = $scope.LineItem.Specs.ProductImage;	
-			
-			$scope.$watch('LineItem.Specs', function (spec) {
-    		//sets Product Image Path to pre-existing four51 path
-    		if (spec && (spec.Name  = 'ProductImage') && ($scope.LineItem.Product.Type != 'VariableText')) {
-    			if (!$scope.LineItem.Product.IsVBOSS) {	 
-    				if ($scope.LineItem.Specs && $scope.LineItem.Specs.ProductImage) {
-    					$scope.LineItem.Specs.ProductImage.Value = data.product.SmallImageUrl;
-    				}
-    			}
-    		}
-    		//sets Weight spec to be equal to weight on properties page
-    		if (spec && (spec.Name  = 'Weight') && ($scope.LineItem.Product.Type != 'VariableText')) {
-    			if (!$scope.LineItem.Product.IsVBOSS) {     
-    				if ($scope.LineItem.Specs && $scope.LineItem.Specs.Weight) {
-    					$scope.LineItem.Specs.Weight.Value = data.product.ShipWeight;
-    				}
-    			}
-    		} 
-    });
-			
 			if (angular.isFunction(callback))
 				callback();
 		}, $scope.settings.currentPage, $scope.settings.pageSize, searchTerm);
 	}
-	
-	//
-	console.log('going to send it like Mirra');
-	
 	$scope.$watch('settings.currentPage', function(n, o) {
 		if (n != o || (n == 1 && o == 1))
 			init($scope.searchTerm);

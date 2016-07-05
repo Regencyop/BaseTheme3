@@ -2,7 +2,8 @@ four51.app.controller('CartViewCtrl', ['$scope', '$routeParams', '$location', '$
 function ($scope, $routeParams, $location, $451, Order, OrderConfig, User, Punchout, $sce, $timeout, $window) {
     //var declarations
     var Base64, decodedString, productImagePosition, weightPosition, newStrings, updatedString, valueAssignment, encodedXMLString, updatedXML, itemProdIds, minimumTotal, string, itemLines, inc, shippingWeight, idOfProduct, lineItemString, finalizedString = '', productInformation = {};
-    
+    //$scope.LineItem.Specs.Weight.Value = data.product.ShipWeight;
+
 //update this for the items to achieve a minimum total order
 //  var itemProdIds = {array1 : {'item1','item2'}, array2 : {'item1', 'item2'}, item3 : 'item'};    
     itemProdIds = ['item1', 'item2'];
@@ -43,7 +44,7 @@ function ($scope, $routeParams, $location, $451, Order, OrderConfig, User, Punch
                                 newStrings = lineItemString[increment] = updatedString;
                             } else {
                                 newStrings = lineItemString[increment].split('<Extrinsic name="ProductImage">');
-                                newStrings[1] = newStrings[1].replace('</Extrinsic>','');
+                                newStrings[1] = newStrings[1].substring(newStrings[1].indexOf(">") + 1);
                                 updatedString = newStrings[0] + '<Extrinsic name="ProductImage">' + imageURL + '</Extrinsic>' + newStrings[1];
                                 newStrings = lineItemString[increment] = updatedString;
                             }
@@ -54,7 +55,7 @@ function ($scope, $routeParams, $location, $451, Order, OrderConfig, User, Punch
                                 newStrings = lineItemString[increment] = updatedString;
                             } else {
                                 newStrings = lineItemString[increment].split('<Extrinsic name="Weight">');
-                                newStrings[1] = newStrings[1].replace('</Extrinsic>','');
+                                newStrings[1] = newStrings[1].substring(newStrings[1].indexOf(">") + 1);
                                 updatedString = newStrings[0] + '<Extrinsic name="Weight">' + shippingWeight + '</Extrinsic>' + newStrings[1];
                                 newStrings = lineItemString[increment] = updatedString;
                             }
@@ -65,7 +66,7 @@ function ($scope, $routeParams, $location, $451, Order, OrderConfig, User, Punch
                                 newStrings = lineItemString[increment] = updatedString;
                             } else {
                                 newStrings = lineItemString[increment].split('<Extrinsic name="VibeItemID">');
-                                newStrings[1] = newStrings[1].replace('</Extrinsic>','');
+                                newStrings[1] = newStrings[1].substring(newStrings[1].indexOf(">") + 1);
                                 updatedString = newStrings[0] + '<Extrinsic name="VibeItemID">' + idOfProduct + '</Extrinsic>' + newStrings[1];
                                 newStrings = lineItemString[increment] = updatedString;
                             }
@@ -271,3 +272,6 @@ function ($scope, $routeParams, $location, $451, Order, OrderConfig, User, Punch
 		$location.path('order');
 	};
 }]);
+
+
+

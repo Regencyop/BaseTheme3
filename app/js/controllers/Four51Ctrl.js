@@ -10,6 +10,15 @@ function ($scope, $route, $location, $451, Punchout, User, Order, Security, Orde
 		});
 	}
 
+	    //get user Data
+    User.get(function (user, data) {
+        $scope.userData = user;
+    });
+
+	//get companyId
+	var companyId = $scope.companyId = document.getElementsByTagName('base')[0].attributes[0].value.replace(/[^0-9]+/g, '');
+    	var ftpUrlPrefix = $scope.ftpUrlPrefix = 'https://www.four51.com/Themes/Custom/df7e2b71-6326-4da6-a24f-554d7d910faf/companyId/' + companyId;
+    
 	// fix Bootstrap fixed-top and fixed-bottom from jumping around on mobile input when virtual keyboard appears
 	if ($(window).width() < 960) {
 		$(document)

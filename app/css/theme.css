@@ -2591,7 +2591,12 @@ fieldset[disabled] .btn-link:focus {
         font-weight: bolder;
     }
 	
-/*	.product-image-large { need to enlarge container}*/
+	.product-image-large {
+		margin: 0 auto;
+		max-height: 600px;
+		max-width: 100%;
+	}
+
 	
 	nav.nav ul li.hidden-sm {
 		display: none;

@@ -2074,6 +2074,9 @@ fieldset[disabled] .btn-link:focus {
 .container-view {
   margin-top: 45px;
 }
+.backgroundShadow {
+  box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.4);
+}
 .navbar .container,
 .navbar .container-view {
   padding: 0;

@@ -2949,6 +2949,7 @@ font-weight: bold;
         position: relative;
         font-size: 1.15em;
         text-decoration: none;
+        text-transform: uppercase;
         bottom: 85px;
         padding: 7px 75px;
         background-color: rgba(235,235,235,0.0);

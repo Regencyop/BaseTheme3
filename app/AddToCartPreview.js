@@ -59,7 +59,7 @@ function addtocartpreview() {
             '</button>',
             '</div>',
             '<div class="col-md-6 col-xs-12">',
-            '<button class="btn btn-success btn-lg btn-block" ng-disabled="invalidVariantQty" ng-click="addListToCart(list)">',
+            '<button ng-show="list.length > 0" class="btn btn-success btn-lg btn-block" ng-disabled="invalidVariantQty" ng-click="addListToCart(list)">',
             '<i ng-show="addToOrderForm.$invalid" class="fa fa-warning"></i>',
             '<span>Add List to Cart </span>',
             '</button>',

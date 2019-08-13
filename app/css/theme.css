@@ -2600,6 +2600,7 @@ fieldset[disabled] .btn-link:focus {
 	max-width: 100%;
     }
 
+/* Original Image Zoom Deployment -MW
     img.product-image-large:hover {
 	position: relative;
 	-webkit-transform: scale(2);
@@ -2612,6 +2613,7 @@ fieldset[disabled] .btn-link:focus {
 	margin: 90px 0 0 90px;
 	box-shadow: 0 0 16px 0 rgba(0,0,0,.25);
     }
+*/
 	
 	nav.nav ul li.hidden-sm {
 		display: none;
